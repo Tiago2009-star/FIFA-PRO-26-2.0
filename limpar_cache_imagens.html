@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limpar cache de imagens</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg,#0d1117,#161b22); color:#e6edf3; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; }
+  .box { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:36px 32px; max-width:480px; text-align:center; box-shadow:0 8px 30px rgba(0,0,0,0.4); }
+  .icon { font-size:3em; margin-bottom:8px; }
+  h2 { margin:8px 0 12px; font-size:1.4em; }
+  p { font-size:0.95em; line-height:1.5; color:#9da7b3; }
+  button { background:#238636; color:#fff; border:none; border-radius:8px; padding:13px 26px; font-size:16px; font-weight:600; cursor:pointer; margin-top:18px; transition:background 0.2s; }
+  button:hover { background:#2ea043; }
+  #msg { margin-top:16px; color:#7ee787; font-weight:600; min-height:1.4em; }
+  code { background:#0d1117; padding:2px 6px; border-radius:4px; font-size:0.85em; color:#ffa657; }
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="icon">🧹</div>
+  <h2>Limpar cache de imagens</h2>
+  <p>Isto apaga <b>apenas</b> o cache de imagens dos cromos de 2026 guardado no browser
+     (<code>wc2026ImgCache</code>).<br>
+     Os teus cromos colecionados <b>não</b> são apagados.</p>
+  <button onclick="limpar()">Apagar cache de imagens</button>
+  <p id="msg"></p>
+</div>
+<script>
+  function limpar() {
+    try {
+      localStorage.removeItem('wc2026ImgCache');
+      document.getElementById('msg').textContent = '✅ Cache apagado! Podes fechar esta página e abrir o index.html.';
+    } catch (e) {
+      document.getElementById('msg').textContent = 'Erro: ' + e.message;
+    }
+  }
+</script>
+</body>
+</html>

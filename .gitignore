@@ -1,0 +1,22 @@
+node_modules/
+.env
+*.log
+.DS_Store
+Thumbs.db
+index.html.test
+*.ps1
+*.py
+Modelos Personalizados do Office/
+laststicker_*.html
+mundodasfigurinhas.html
+upload-stickers.html
+upload-teams*.html
+test_*.html
+teste*.html
+worldcup_data_*.json
+find_*.ps1
+fix_*.ps1
+read_section.ps1
+test_sort.ps1
+compare.*
+iniciar.bat

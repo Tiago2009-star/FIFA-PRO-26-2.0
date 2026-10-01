@@ -1,0 +1,46 @@
+FIFARINHAS - Projeto dos cromos (resumo para continuar o trabalho)
+===================================================================
+
+CAMINHO PRINCIPAL:
+  C:\Users\Utilizador\Documents\cromos_temp\index.html
+  (o index.html depende dos ficheiros teams*.js que estão na MESMA pasta -
+   copiar SEMPRE a pasta inteira, nunca só o index.html)
+
+COMO CONTINUAR NUMA CONVERSA NOVA:
+  Dizer ao assistente: "continua o trabalho em C:/Users/Utilizador/Documents/cromos_temp/index.html"
+  Este ficheiro diz o que já foi feito.
+
+ALTERAÇÕES JÁ FEITAS (por ordem):
+1. Álbum 2022 - numeração dos cromos por seleção (1 a 20), em vez de numeração global.
+2. Contadores das seleções: o cromo "update" só conta quando NÃO tens o original.
+3. Ao selecionar um update sem teres o original, o update também fica com a cor de selecionado na grelha.
+4. Contadores de cada seleção nas abas "Troca" e "Repetidas" mostram "selecionados/total (com updates)".
+   Aplicado às seleções de equipas E às secções especiais FWC Top, FWC 2026 e Coca-Cola.
+   Só aparece nessas duas abas (Troca e Repetidas).
+5. Ao mudar de álbum estando na aba "Troca" ou "Repetidas", a aba mantém-se (grelha vazia,
+   em vez de mostrar todos os cromos do novo álbum). As outras abas continuam a abrir em "Todos".
+   Código aplicado em _openTabInternal e em switchAlbum:
+     if (currentTab !== 'wanted' && currentTab !== 'dups') currentTab = 'all';
+6. Ícones PWA refeitos com novo design (pictograma de jogador branco a pontapear a bola,
+   em fundo laranja #F26B26): icon-192.png e icon-512.png. favicon.ico (32x32) com a mesma
+   arte + <link rel="icon"> no index.html — o separador do browser deixa de mostrar o globo.
+   Cache do sw.js subida ('fifarinhas-v4', com favicon.ico na pré-cache).
+7. Botão "Instalar App" (Definições): abre um guia com duas opções (função _showInstallGuide):
+   Opção 1 — GOOGLE (rápido, sem contas): botão "Instalar / Criar atalho agora" chama
+   installAppBrowser(), que usa o prompt nativo do Chrome se existir; senão mostra os passos:
+   Android (Chrome: ⋮ → Instalar aplicação), iPhone (Safari: Partilhar → Adicionar ao Ecrã
+   Inicial) ou PC (ícone ⊕/Instalar na barra de endereço, cria atalho no Desktop).
+   Opção 2 — MEDIAN.CO: passos para criar app nativa (conta opcional → colar o link da app no
+   App Studio → Android: APK; iPhone: App Store/TestFlight). Link usado no guia (_appUrl):
+     https://restless-math-264f.tiagoserra2009.workers.dev
+8. Publicação no Cloudflare Workers: o site online só servia o index.html (manifest e ícones
+   davam 404) e por isso o Chrome não mostrava o ícone de instalar na barra de endereço.
+   Criado gen_worker.ps1, que gera worker.js (~1 MB) com TUDO embutido (index, manifest,
+   sw, icon-192/512, favicon, teams*.js). Para publicar: dashboard Cloudflare → Workers →
+   restless-math-264f → Edit code → colar o conteúdo de worker.js → Deploy.
+   Sempre que o index.html mudar, correr de novo: powershell -File gen_worker.ps1
+
+NÃO VALIDADO:
+  As alterações não foram testadas no browser (sem terminal disponível na máquina).
+  Falta abrir o index.html e confirmar: mudar de álbum nas abas Troca/Repetidas fica vazio;
+  contadores de Troca/Repetidas mostram "X/total (com updates)".

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gerar Icones Fifarinhas</title>
+  <style>
+    body { background: #1a1a2e; color: #fff; font-family: Arial; text-align: center; padding: 40px; }
+    canvas { border: 1px solid #333; margin: 10px; }
+    a { color: #e94560; font-size: 1.2em; display: block; margin: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Gerar Icones da App</h1>
+  <p>Clique em cada link para transferir o icone</p>
+  <div id="out"></div>
+  <script>
+    function drawIcon(size) {
+      var c = document.createElement('canvas');
+      c.width = size; c.height = size;
+      var ctx = c.getContext('2d');
+      // Fundo
+      var grad = ctx.createLinearGradient(0, 0, size, size);
+      grad.addColorStop(0, '#0f3460');
+      grad.addColorStop(1, '#1a1a2e');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.roundRect(0, 0, size, size, size * 0.18);
+      ctx.fill();
+      // Bola de futebol
+      var cx = size / 2, cy = size * 0.44, r = size * 0.22;
+      ctx.fillStyle = '#fff';
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#333';
+      ctx.lineWidth = size * 0.015;
+      ctx.stroke();
+      // Pentagonos da bola
+      var pr = r * 0.38;
+      ctx.fillStyle = '#333';
+      for (var i = 0; i < 5; i++) {
+        var a = (i * 72 - 90) * Math.PI / 180;
+        var px = cx + Math.cos(a) * r * 0.55;
+        var py = cy + Math.sin(a) * r * 0.55;
+        ctx.beginPath();
+        for (var j = 0; j < 5; j++) {
+          var a2 = (j * 72 - 90 + i * 72) * Math.PI / 180;
+          var x2 = px + Math.cos(a2) * pr;
+          var y2 = py + Math.sin(a2) * pr;
+          j === 0 ? ctx.moveTo(x2, y2) : ctx.lineTo(x2, y2);
+        }
+        ctx.closePath();
+        ctx.fill();
+      }
+      // Texto "26"
+      ctx.fillStyle = '#e94560';
+      ctx.font = 'bold ' + (size * 0.18) + 'px Arial';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('26', cx, size * 0.75);
+      // Nome pequeno
+      ctx.fillStyle = '#fff';
+      ctx.font = (size * 0.06) + 'px Arial';
+      ctx.fillText('FIFARINHAS', cx, size * 0.9);
+      return c;
+    }
+    [192, 512].forEach(function(s) {
+      var c = drawIcon(s);
+      var out = document.getElementById('out');
+      var h = document.createElement('h3');
+      h.textContent = s + 'x' + s;
+      out.appendChild(h);
+      out.appendChild(c);
+      var a = document.createElement('a');
+      a.href = c.toDataURL('image/png');
+      a.download = 'icon-' + s + '.png';
+      a.textContent = 'Transferir icon-' + s + '.png';
+      out.appendChild(a);
+    });
+  </script>
+</body>
+</html>

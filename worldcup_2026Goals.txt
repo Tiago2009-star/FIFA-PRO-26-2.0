@@ -1,0 +1,215 @@
+MATCH: México 2-0 Sudáfrica
+GOALSCORERS: Quiñones 9' (México), Jiménez 67' (México)
+
+MATCH: Coreia do Sul 2-1 República Tcheca
+GOALSCORERS: Hwang In-beom 67' (Coreia do Sul), Oh Hyeon-gyu 80' (Coreia do Sul) / Krejčí 59' (República Tcheca)
+
+MATCH: República Tcheca 1-1 Sudáfrica
+GOALSCORERS: Sadílek 6' (República Tcheca) / Mokoena 83' golo de penálti (Sudáfrica)
+
+MATCH: México 1-0 Coreia do Sul
+GOALSCORERS: Romo 50' (México)
+
+MATCH: República Tcheca 0-3 México
+GOALSCORERS: M. Chávez 55' (México), Quiñones 61' (México), Fidalgo 90+4' (México)
+
+MATCH: Sudáfrica 1-0 Coreia do Sul
+GOALSCORERS: Maseko 63' (Sudáfrica)
+
+MATCH: Canadá 1-1 Bósnia e Herzegovina
+GOALSCORERS: Larin 78' (Canadá) / Lukić 21' (Bósnia e Herzegovina)
+
+MATCH: Catar 1-1 Suíça
+GOALSCORERS: Muheim 90+4' golo contra (Catar) / Embolo 17' golo de penálti (Suíça)
+
+MATCH: Suíça 4-1 Bósnia e Herzegovina
+GOALSCORERS: Manzambi 74', 90' (Suíça), Vargas 84' (Suíça), Xhaka 90+7' golo de penálti (Suíça) / Mahmić 90+3' (Bósnia e Herzegovina)
+
+MATCH: Canadá 6-0 Catar
+GOALSCORERS: Larin 16' (Canadá), J. David 29', 45+3', 90+2' (Canadá), Saliba 64' (Canadá), Manai 75' golo contra (Canadá)
+
+MATCH: Suíça 2-1 Canadá
+GOALSCORERS: Vargas 46' (Suíça), Manzambi 57' (Suíça) / P. David 76' (Canadá)
+
+MATCH: Bósnia e Herzegovina 3-1 Catar
+GOALSCORERS: Alajbegović 29' (Bósnia e Herzegovina), Abunada 34' golo contra (Bósnia e Herzegovina), Mahmić 80' (Bósnia e Herzegovina) / Al-Haydos 42' (Catar)
+
+MATCH: Brasil 1-1 Marrocos
+GOALSCORERS: Vinícius 32' (Brasil) / Saibari 21' (Marrocos)
+
+MATCH: Haití 0-1 Escócia
+GOALSCORERS: McGinn 28' (Escócia)
+
+MATCH: Escócia 0-1 Marrocos
+GOALSCORERS: Saibari 2' (Marrocos)
+
+MATCH: Brasil 3-0 Haití
+GOALSCORERS: Cunha 23', 36' (Brasil), Vinícius 45+3' (Brasil)
+
+MATCH: Escócia 0-3 Brasil
+GOALSCORERS: Vinícius 7', 45+3' (Brasil), Cunha 60' (Brasil)
+
+MATCH: Marrocos 4-2 Haití
+GOALSCORERS: Hakimi 39' (Marrocos), Saibari 45+1' (Marrocos), Rahimi 78' (Marrocos), Yassine 89' (Marrocos) / Bounou 10' golo contra (Haití), Isidor 43' (Haití)
+
+MATCH: Estados Unidos 4-1 Paraguai
+GOALSCORERS: Bobadilla 7' golo contra (Estados Unidos), Balogun 31', 45+5' (Estados Unidos), Reyna 90+8' (Estados Unidos) / Maurício 73' (Paraguai)
+
+MATCH: Austrália 2-0 Turquia
+GOALSCORERS: Irankunda 27' (Austrália), Metcalfe 75' (Austrália)
+
+MATCH: Estados Unidos 2-0 Austrália
+GOALSCORERS: Burgess 11' golo contra (Estados Unidos), Freeman 43' (Estados Unidos)
+
+MATCH: Turquia 0-1 Paraguai
+GOALSCORERS: Galarza 2' (Paraguai)
+
+MATCH: Turquia 3-2 Estados Unidos
+GOALSCORERS: Güler 10' (Turquia), Yılmaz 31' (Turquia), Ayhan 90+8' (Turquia) / Trusty 3' (Estados Unidos), Berhalter 49' (Estados Unidos)
+
+MATCH: Paraguai 0-0 Austrália
+GOALSCORERS: (sem golos)
+
+MATCH: Alemanha 7-1 Curaçao
+GOALSCORERS: Nmecha 6' (Alemanha), Schlotterbeck 38' (Alemanha), Havertz 45+5' golo de penálti, 88' (Alemanha), Musiala 47' (Alemanha), Brown 68' (Alemanha), Undav 78' (Alemanha) / Comenencia 21' (Curaçao)
+
+MATCH: Costa do Marfim 1-0 Equador
+GOALSCORERS: Diallo 90' (Costa do Marfim)
+
+MATCH: Alemanha 2-1 Costa do Marfim
+GOALSCORERS: Undav 68', 90+4' (Alemanha) / Kessié 30' (Costa do Marfim)
+
+MATCH: Equador 0-0 Curaçao
+GOALSCORERS: (sem golos)
+
+MATCH: Curaçao 0-2 Costa do Marfim
+GOALSCORERS: Pépé 7', 64' (Costa do Marfim)
+
+MATCH: Equador 2-1 Alemanha
+GOALSCORERS: Angulo 9' (Equador), Plata 77' (Equador) / Sané 2' (Alemanha)
+
+MATCH: Países Baixos 2-2 Japão
+GOALSCORERS: Van Dijk 51' (Países Baixos), Summerville 64' (Países Baixos) / Nakamura 57' (Japão), Kamada 88' (Japão)
+
+MATCH: Suécia 5-1 Tunísia
+GOALSCORERS: Ayari 7', 90+6' (Suécia), Isak 30' (Suécia), Gyökeres 59' (Suécia), Svanberg 84' (Suécia) / Rekik 43' (Tunísia)
+
+MATCH: Países Baixos 5-1 Suécia
+GOALSCORERS: Brobbey 5', 17' (Países Baixos), Gakpo 47', 54' (Países Baixos), Summerville 89' (Países Baixos) / Elanga 59' (Suécia)
+
+MATCH: Tunísia 0-4 Japão
+GOALSCORERS: Kamada 4' (Japão), Ueda 31', 83' (Japão), J. Itō 69' (Japão)
+
+MATCH: Japão 1-1 Suécia
+GOALSCORERS: Maeda 56' (Japão) / Elanga 62' (Suécia)
+
+MATCH: Tunísia 1-3 Países Baixos
+GOALSCORERS: Mastouri 54' (Tunísia) / Skhiri 3' golo contra (Países Baixos), Brobbey 7' (Países Baixos), Van Hecke 62' (Países Baixos)
+
+MATCH: Bélgica 1-1 Egito
+GOALSCORERS: Hany 66' golo contra (Bélgica) / Ashour 19' (Egito)
+
+MATCH: Irã 2-2 Nova Zelândia
+GOALSCORERS: Rezaeian 32' (Irã), Mohebi 64' (Irã) / Just 7', 54' (Nova Zelândia)
+
+MATCH: Bélgica 0-0 Irã
+GOALSCORERS: (sem golos)
+
+MATCH: Nova Zelândia 1-3 Egito
+GOALSCORERS: Surman 15' (Nova Zelândia) / Ziko 58' (Egito), Salah 67' (Egito), Trézéguet 82' (Egito)
+
+MATCH: Egito 1-1 Irã
+GOALSCORERS: Saber 5' (Egito) / Rezaeian 14' (Irã)
+
+MATCH: Nova Zelândia 1-5 Bélgica
+GOALSCORERS: Just 84' (Nova Zelândia) / Trossard 28', 50' (Bélgica), De Bruyne 66' (Bélgica), Lukaku 86' (Bélgica), Saelemaekers 90+4' (Bélgica)
+
+MATCH: Espanha 0-0 Cabo Verde
+GOALSCORERS: (sem golos)
+
+MATCH: Arábia Saudita 1-1 Uruguai
+GOALSCORERS: Al-Amri 41' (Arábia Saudita) / M. Araújo 80' (Uruguai)
+
+MATCH: Espanha 4-0 Arábia Saudita
+GOALSCORERS: Yamal 10' (Espanha), Oyarzabal 21', 24' (Espanha), Al-Tambakti 49' golo contra (Espanha)
+
+MATCH: Uruguai 2-2 Cabo Verde
+GOALSCORERS: M. Araújo 44' (Uruguai), Canobbio 45+6' (Uruguai) / K. Pina 21' (Cabo Verde), Varela 61' (Cabo Verde)
+
+MATCH: Cabo Verde 0-0 Arábia Saudita
+GOALSCORERS: (sem golos)
+
+MATCH: Uruguai 0-1 Espanha
+GOALSCORERS: Baena 42' (Espanha)
+
+MATCH: França 3-1 Senegal
+GOALSCORERS: Mbappé 66', 90+6' (França), Barcola 82' (França) / Mbaye 90+5' (Senegal)
+
+MATCH: Iraque 1-4 Noruega
+GOALSCORERS: Hussein 39' (Iraque) / Haaland 29', 43' (Noruega), Østigård 76' (Noruega), Hussein 90+6' golo contra (Noruega)
+
+MATCH: França 3-0 Iraque
+GOALSCORERS: Mbappé 14', 54' (França), Dembélé 66' (França)
+
+MATCH: Noruega 3-2 Senegal
+GOALSCORERS: Pedersen 43' (Noruega), Haaland 48', 58' (Noruega) / I. Sarr 53', 90+3' (Senegal)
+
+MATCH: Noruega 1-4 França
+GOALSCORERS: Aasgaard 21' (Noruega) / Dembélé 7', 20', 32' (França), Doué 90+4' (França)
+
+MATCH: Senegal 5-0 Iraque
+GOALSCORERS: Diarra 4' (Senegal), I. Sarr 56' (Senegal), P. Gueye 59', 71' (Senegal), I. Ndiaye 82' (Senegal)
+
+MATCH: Argentina 3-0 Argélia
+GOALSCORERS: Messi 17', 60', 76' (Argentina)
+
+MATCH: Áustria 3-1 Jordânia
+GOALSCORERS: Schmid 20' (Áustria), Al-Arab 76' golo contra (Áustria), Arnautović 90+12' golo de penálti (Áustria) / Olwan 50' (Jordânia)
+
+MATCH: Argentina 2-0 Áustria
+GOALSCORERS: Messi 38', 90+5' (Argentina)
+
+MATCH: Jordânia 1-2 Argélia
+GOALSCORERS: Al-Rashdan 36' (Jordânia) / Benbouali 69' (Argélia), Gouiri 82' (Argélia)
+
+MATCH: Argélia 3-3 Áustria
+GOALSCORERS: Belghali 45' (Argélia), Mahrez 60', 90+3' (Argélia) / Arnautović 28' (Áustria), Sabitzer 55' (Áustria), Kalajdžić 90+6' (Áustria)
+
+MATCH: Jordânia 1-3 Argentina
+GOALSCORERS: Al-Taamari 55' (Jordânia) / Lo Celso 19' (Argentina), L. Martínez 31' golo de penálti (Argentina), Messi 80' (Argentina)
+
+MATCH: Portugal 1-1 Congo DR
+GOALSCORERS: J. Neves 6' (Portugal) / Wissa 45+5' (Congo DR)
+
+MATCH: Uzbequistão 1-3 Colômbia
+GOALSCORERS: Fayzullaev 60' (Uzbequistão) / Muñoz 40' (Colômbia), Díaz 65' (Colômbia), Campaz 90+9' (Colômbia)
+
+MATCH: Portugal 5-0 Uzbequistão
+GOALSCORERS: Ronaldo 6', 39' (Portugal), Mendes 17' (Portugal), Nematov 60' golo contra (Portugal), Leão 87' (Portugal)
+
+MATCH: Colômbia 1-0 Congo DR
+GOALSCORERS: Muñoz 76' (Colômbia)
+
+MATCH: Colômbia 0-0 Portugal
+GOALSCORERS: (sem golos)
+
+MATCH: Congo DR 3-1 Uzbequistão
+GOALSCORERS: Wissa 68' golo de penálti, 90+1' (Congo DR), Mayele 78' (Congo DR) / Shomurodov 10' (Uzbequistão)
+
+MATCH: Inglaterra 4-2 Croácia
+GOALSCORERS: Kane 12' golo de penálti, 42' (Inglaterra), Bellingham 47' (Inglaterra), Rashford 85' (Inglaterra) / Baturina 36' (Croácia), Musa 45+5' (Croácia)
+
+MATCH: Gana 1-0 Panamá
+GOALSCORERS: Yirenkyi 90+5' (Gana)
+
+MATCH: Inglaterra 0-0 Gana
+GOALSCORERS: (sem golos)
+
+MATCH: Panamá 0-1 Croácia
+GOALSCORERS: Budimir 54' (Croácia)
+
+MATCH: Panamá 0-2 Inglaterra
+GOALSCORERS: Bellingham 62' (Inglaterra), Kane 67' (Inglaterra)
+
+MATCH: Croácia 2-1 Gana
+GOALSCORERS: P. Sučić 31' (Croácia), Vlašić 83' (Croácia) / Luckassen 73' (Gana)

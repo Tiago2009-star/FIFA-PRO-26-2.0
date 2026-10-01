@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalar Fifarinhas 26</title>
+  <style>
+    :root { --bg: #1a1a2e; --card: #16213e; --accent: #e94560; --gold: #f5a623; --green: #2ecc71; --blue: #3498db; --text: #ecf0f1; --muted: #7f8c8d; --border: #2a2a4a; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 30px 20px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 32px 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+    .logo { width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), #c0392b); border-radius: 22px; display: flex; align-items: center; justify-content: center; font-size: 2.4em; margin: 0 auto 16px; box-shadow: 0 8px 25px rgba(233,69,96,0.3); }
+    h1 { font-size: 1.5em; font-weight: 800; margin-bottom: 4px; }
+    h1 span { color: var(--accent); }
+    .sub { color: var(--muted); font-size: 0.85em; margin-bottom: 24px; }
+    .platform-section { display: none; }
+    .platform-section.active { display: block; }
+    .step { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; text-align: left; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8em; flex-shrink: 0; }
+    .step-text { font-size: 0.88em; line-height: 1.5; }
+    .step-text b { color: var(--gold); }
+    .btn { display: block; width: 100%; padding: 14px; border-radius: 12px; border: none; font-size: 1em; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 16px; font-family: inherit; }
+    .btn:active { transform: scale(0.97); }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { opacity: 0.9; }
+    .btn-blue { background: var(--blue); color: #fff; }
+    .btn-blue:hover { opacity: 0.9; }
+    .btn-gold { background: var(--gold); color: #1a1a2e; }
+    .btn-gold:hover { opacity: 0.9; }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-outline:hover { background: rgba(255,255,255,0.05); }
+    .url-input { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--border); background: rgba(255,255,255,0.05); color: var(--text); font-size: 0.9em; font-family: inherit; outline: none; margin-bottom: 12px; box-sizing: border-box; }
+    .url-input:focus { border-color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.7em; padding: 3px 8px; border-radius: 8px; font-weight: 700; margin-left: 6px; vertical-align: middle; }
+    .icon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .icon-btn { padding: 18px 8px; background: rgba(255,255,255,0.04); border: 2px solid var(--border); border-radius: 14px; cursor: pointer; transition: 0.2s; text-align: center; }
+    .icon-btn:hover { border-color: var(--accent); background: rgba(233,69,96,0.08); }
+    .icon-btn.selected { border-color: var(--green); background: rgba(46,125,50,0.1); }
+    .icon-btn .emoji { font-size: 2em; display: block; margin-bottom: 6px; }
+    .icon-btn .label { font-size: 0.72em; font-weight: 600; color: var(--muted); }
+    .divider { height: 1px; background: var(--border); margin: 20px 0; }
+    .note { font-size: 0.75em; color: var(--muted); margin-top: 16px; line-height: 1.5; }
+    .install-type { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .type-btn { padding: 16px 10px; background: rgba(255,255,255,0.04); border: 2px solid var(--border); border-radius: 14px; cursor: pointer; transition: 0.2s; text-align: center; }
+    .type-btn:hover { border-color: var(--accent); }
+    .type-btn.selected { border-color: var(--green); background: rgba(46,125,50,0.1); }
+    .type-btn .emoji { font-size: 1.8em; display: block; margin-bottom: 4px; }
+    .type-btn .label { font-size: 0.78em; font-weight: 600; }
+    .type-btn .desc { font-size: 0.65em; color: var(--muted); margin-top: 2px; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo">⚽</div>
+  <h1>FIFA<span>RINHAS 26</span></h1>
+  <div class="sub">Instala a aplicação no teu dispositivo</div>
+
+  <!-- STEP 1: URL -->
+  <div id="stepUrl">
+    <input class="url-input" type="url" id="appUrl" placeholder="https://exemplo.github.io/fifarinhas" autofocus>
+    <button class="btn btn-green" onclick="goStep2()">Continuar →</button>
+    <div class="note">
+      Não tens a app online? Copia o link do teu servidor (GitHub Pages, Netlify, Firebase Hosting, etc.)
+    </div>
+  </div>
+
+  <!-- STEP 2: Plataforma -->
+  <div id="stepPlatform" class="hidden">
+    <div style="text-align:left;margin-bottom:12px;font-weight:700;color:var(--gold);font-size:0.9em;">Em que dispositivo queres instalar?</div>
+    <div class="icon-grid">
+      <div class="icon-btn" onclick="selectPlatform('windows')">
+        <span class="emoji">🪟</span>
+        <span class="label">Windows</span>
+      </div>
+      <div class="icon-btn" onclick="selectPlatform('android')">
+        <span class="emoji">🤖</span>
+        <span class="label">Android</span>
+      </div>
+      <div class="icon-btn" onclick="selectPlatform('ios')">
+        <span class="emoji">🍎</span>
+        <span class="label">iPhone / iPad</span>
+      </div>
+      <div class="icon-btn" onclick="selectPlatform('mac')">
+        <span class="emoji">💻</span>
+        <span class="label">Mac</span>
+      </div>
+      <div class="icon-btn" onclick="selectPlatform('linux')">
+        <span class="emoji">🐧</span>
+        <span class="label">Linux</span>
+      </div>
+      <div class="icon-btn" onclick="selectPlatform('qr')">
+        <span class="emoji">📱</span>
+        <span class="label">QR Code</span>
+      </div>
+    </div>
+    <button class="btn btn-outline" onclick="goStep1()">← Voltar</button>
+  </div>
+
+  <!-- STEP 3: Instruções por plataforma -->
+  <div id="stepInstructions" class="hidden"></div>
+</div>
+
+<script>
+  var appUrl = '';
+
+  function goStep1() {
+    document.getElementById('stepUrl').classList.remove('hidden');
+    document.getElementById('stepPlatform').classList.add('hidden');
+    document.getElementById('stepInstructions').classList.add('hidden');
+  }
+
+  function goStep2() {
+    appUrl = document.getElementById('appUrl').value.trim();
+    if (!appUrl) { document.getElementById('appUrl').style.borderColor = '#e94560'; return; }
+    if (!appUrl.startsWith('http')) appUrl = 'https://' + appUrl;
+    document.getElementById('stepUrl').classList.add('hidden');
+    document.getElementById('stepPlatform').classList.remove('hidden');
+    document.getElementById('stepInstructions').classList.add('hidden');
+  }
+
+  function selectPlatform(p) {
+    document.querySelectorAll('.icon-btn').forEach(function(b) { b.classList.remove('selected'); });
+    event.currentTarget.classList.add('selected');
+    setTimeout(function() { showInstructions(p); }, 200);
+  }
+
+  function showInstructions(p) {
+    var html = '';
+    var inst = document.getElementById('stepInstructions');
+    inst.classList.remove('hidden');
+    document.getElementById('stepPlatform').classList.add('hidden');
+
+    if (p === 'windows') {
+      html = '<div style="text-align:left;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">🪟 Instalar no Windows</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link abaixo no <b>Chrome</b> ou <b>Edge</b></div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Clica no ícone <b>📦 Instalar</b> na barra de endereço (ou menu ⋮ → Instalar aplicação)</div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">Confirma — a app aparece no <b>Menu Iniciar</b> e no <b>Desktop</b></div></div>' +
+        '<div class="divider"></div>' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:10px;font-size:0.9em;">Ou transfere um atalho:</div>' +
+        '<button class="btn btn-gold" onclick="downloadWindowsShortcut()">⬇️ Transferir Atalho (.url)</button>' +
+        '<button class="btn btn-blue" onclick="downloadWindowsPWA()" style="margin-top:8px;">⬇️ Transferir Instalador (.bat)</button>' +
+        '</div>';
+    } else if (p === 'android') {
+      html = '<div style="text-align:left;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">🤖 Instalar no Android</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link no <b>Chrome</b></div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Toca nos <b>3 pontinhos</b> ⋮ (canto superior direito)</div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">Toca em <b>"Instalar aplicação"</b> ou <b>"Adicionar ao ecrã inicial"</b></div></div>' +
+        '<div class="step"><div class="step-num">4</div><div class="step-text">Confirma — a app aparece no ecrã inicial</div></div>' +
+        '</div>';
+    } else if (p === 'ios') {
+      html = '<div style="text-align:left;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">🍎 Instalar no iPhone / iPad</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link no <b>Safari</b> (obrigatório!)</div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Toca no botão <b>Partilhar</b> ▣ (em baixo ao meio)</div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">Desce e toca em <b>"Adicionar ao Ecrã Inicial"</b></div></div>' +
+        '<div class="step"><div class="step-num">4</div><div class="step-text">Toca em <b>"Adicionar"</b> no canto superior direito</div></div>' +
+        '<div class="note">⚠️ Não funciona no Chrome do iPhone — usa sempre o Safari!</div>' +
+        '</div>';
+    } else if (p === 'mac') {
+      html = '<div style="text-align:left;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">💻 Instalar no Mac</div>' +
+        '<div style="font-weight:600;margin-bottom:10px;font-size:0.88em;">Opção 1 — Safari:</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link no <b>Safari</b></div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Menu <b>Arquivo</b> → <b>"Adicionar ao Dock"</b></div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">Confirma — a app aparece no Dock</div></div>' +
+        '<div style="font-weight:600;margin:14px 0 10px;font-size:0.88em;">Opção 2 — Chrome:</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link no <b>Chrome</b></div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Menu ⋮ → <b>"Instalar Fifarinhas 26"</b></div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">Confirma — aparece na Dock e Launchpad</div></div>' +
+        '</div>';
+    } else if (p === 'linux') {
+      html = '<div style="text-align:left;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">🐧 Instalar no Linux</div>' +
+        '<div class="step"><div class="step-num">1</div><div class="step-text">Abre o link no <b>Chrome</b> ou <b>Chromium</b></div></div>' +
+        '<div class="step"><div class="step-num">2</div><div class="step-text">Menu ⋮ → <b>"Instalar Fifarinhas 26"</b></div></div>' +
+        '<div class="step"><div class="step-num">3</div><div class="step-text">A app aparece no menu de aplicações</div></div>' +
+        '</div>';
+    } else if (p === 'qr') {
+      html = '<div style="text-align:center;">' +
+        '<div style="font-weight:700;color:var(--gold);margin-bottom:14px;font-size:1em;">📱 Instalar via QR Code</div>' +
+        '<div style="background:#fff;padding:20px;border-radius:14px;display:inline-block;margin-bottom:12px;">' +
+        '<canvas id="qrCanvas"></canvas>' +
+        '</div>' +
+        '<div style="font-size:0.8em;color:var(--muted);margin-bottom:12px;">Aponta a câmara do telemóvel para instalar</div>' +
+        '</div>';
+    }
+
+    inst.innerHTML = '<div style="text-align:left;">' + html + '</div>' +
+      '<div class="divider"></div>' +
+      '<button class="btn btn-outline" onclick="goStep2()">← Voltar</button>';
+
+    if (p === 'qr') {
+      setTimeout(function() { drawQR(appUrl); }, 100);
+    }
+  }
+
+  function downloadWindowsShortcut() {
+    var content = '[InternetShortcut]\nURL=' + appUrl + '\nIconIndex=0\n';
+    downloadFile('Fifarinhas-26.url', content, 'text/plain');
+  }
+
+  function downloadWindowsPWA() {
+    var bat = '@echo off\n' +
+      'echo Instalando Fifarinhas 26...\n' +
+      'echo.\n' +
+      'echo Para instalar, abre este link no Chrome ou Edge:\n' +
+      'echo ' + appUrl + '\n' +
+      'echo.\n' +
+      'echo Depois clica no icone de instalar na barra de enderecos.\n' +
+      'echo.\n' +
+      'start "" "' + appUrl + '"\n' +
+      'timeout /t 3 >nul\n';
+    downloadFile('Instalar-Fifarinhas-26.bat', bat, 'application/x-bat');
+  }
+
+  function downloadFile(name, content, type) {
+    var blob = new Blob([content], { type: type });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  }
+
+  function drawQR(text) {
+    var canvas = document.getElementById('qrCanvas');
+    if (!canvas) return;
+    var size = 200;
+    canvas.width = size;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+
+    // QR Code simplificado usando Google Charts API
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function() {
+      ctx.drawImage(img, 0, 0, size, size);
+    };
+    img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=' + size + 'x' + size + '&data=' + encodeURIComponent(text) + '&bgcolor=ffffff&color=1a1a2e&margin=10';
+  }
+
+  // Auto-detect platform
+  (function() {
+    var ua = navigator.userAgent || '';
+    if (/Windows/.test(ua)) document.title += ' — Windows';
+    else if (/Android/.test(ua)) document.title += ' — Android';
+    else if (/iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) document.title += ' — iOS';
+    else if (/Macintosh/.test(ua)) document.title += ' — Mac';
+    else if (/Linux/.test(ua)) document.title += ' — Linux';
+  })();
+</script>
+
+</body>
+</html>
